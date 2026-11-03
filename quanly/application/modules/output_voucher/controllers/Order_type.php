@@ -1,0 +1,402 @@
+<?php
+
+if (!defined('BASEPATH')) {
+	exit('No direct script access allowed');
+}
+include_once APPPATH . '/modules/layout/controllers/Layout.php';
+
+class Order_type extends Layout {
+
+	private $_module_slug = 'phieu-xuat/loai-don-hang';
+	private $_module_name = 'loại đơn hàng';
+
+	function __construct() {
+		parent::__construct();
+		$this->load->model('output_voucher/m_order_type', 'M_order_type');
+		$this->_data['breadcrumbs_module_name'] = ucfirst($this->_module_name);
+		$this->_data['breadcrumbs_module_func'] = 'Danh sách';
+		$this->_data['module_slug'] = $this->_module_slug;
+		$this->_data['module_name'] = $this->_module_name;
+	}
+	
+	private function _validate_access_role(){
+		$this->validate_access_role('ROLE_GROUP_OUTPUT_VOUCHER');
+	}
+
+	function default_args() {
+		$order_by = array(
+			'order' => 'ASC',
+			'modified' => 'DESC',
+			'name' => 'ASC',
+		);
+		$args = array();
+		$args['order_by'] = $order_by;
+
+		return $args;
+	}
+
+	function counts($args) {
+		return $this->M_order_type->counts($args);
+	}
+
+	function get($id) {
+		return $this->M_order_type->get($id);
+	}
+
+	function get_max_order() {
+		$args = $this->default_args();
+		$order_by = array(
+			'order' => 'DESC',
+		);
+		$args['order_by'] = $order_by;
+		$perpage = 1;
+		$offset = 0;
+		$rows = $this->M_order_type->gets($args, $perpage, $offset);
+		$max_order = isset($rows[0]['order']) ? $rows[0]['order'] : 0;
+
+		return (int) $max_order;
+	}
+
+	function gets($in_id = array()) {
+		$this->load->model('m_order_type', 'M_order_type');
+		$args = $this->default_args();
+		if (is_array($in_id) && !empty($in_id)) {
+			$args = array();
+			$args['in_id'] = $in_id;
+		}
+
+		return $this->M_order_type->gets($args);
+	}
+
+	function admin_view() {
+		$this->_validate_access_role();
+
+		$id = (int) (($this->uri->segment(3) == '') ? 0 : $this->uri->segment(3));
+		if ($id == 0) {
+			show_404();
+		}
+		$this->_data['current_page'] = (int) $this->input->get('current_page');
+		$row = $this->get($id);
+		$this->_data['row'] = $row;
+
+		$this->_data['breadcrumbs_module_func'] = 'Xem thông tin nhà cung cấp';
+
+		$this->_data['title'] = 'Xem thông tin nhà cung cấp - ' . $this->_data['breadcrumbs_module_name'];
+		$this->_data['main_content'] = 'admin/view_page_order_type_view';
+		$this->load->view('layout/admin/view_layout', $this->_data);
+	}
+	
+	function admin_index() {
+		$this->_validate_access_role();
+
+		$this->_plugins_css_admin[] = array(
+			'folder' => 'bootstrap3-dialog/css',
+			'name' => 'bootstrap-dialog',
+		);
+		$this->_plugins_script_admin[] = array(
+			'folder' => 'bootstrap3-dialog/js',
+			'name' => 'bootstrap-dialog',
+		);
+		$this->set_plugins_admin();
+
+		$this->_modules_script[] = array(
+			'folder' => 'order_type',
+			'name' => 'admin-items',
+		);
+		$this->set_modules();
+
+		$get = $this->input->get();
+		$this->_data['get'] = $get;
+
+		$args = $this->default_args();
+
+		if (isset($get['q']) && trim($get['q']) != '') {
+			$args['name'] = $get['q'];
+		}
+
+		$total = $this->counts($args);
+		$perpage = isset($get['per_page']) ? $get['per_page'] : $this->config->item('per_page');
+		$segment = 2;
+
+		$this->load->library('pagination');
+		$config['total_rows'] = $total;
+		$config['per_page'] = $perpage;
+		$config['full_tag_open'] = '<ul class="pagination no-margin pull-right">';
+		$config['full_tag_close'] = '</ul><!--pagination-->';
+
+		$config['first_link'] = '&laquo;';
+		$config['first_tag_open'] = '<li class="prev page">';
+		$config['first_tag_close'] = '</li>';
+
+		$config['last_link'] = '&raquo;';
+		$config['last_tag_open'] = '<li class="next page">';
+		$config['last_tag_close'] = '</li>';
+
+		$config['next_link'] = 'Trang trước &rarr;';
+		$config['next_tag_open'] = '<li class="next page">';
+		$config['next_tag_close'] = '</li>';
+
+		$config['prev_link'] = '&larr; Trang sau';
+		$config['prev_tag_open'] = '<li class="prev page">';
+		$config['prev_tag_close'] = '</li>';
+
+		$config['cur_tag_open'] = '<li class="active"><a href="">';
+		$config['cur_tag_close'] = '</a></li>';
+
+		$config['num_tag_open'] = '<li class="page">';
+		$config['num_tag_close'] = '</li>';
+
+		if (!empty($get)) {
+			$config['base_url'] = base_url($this->_module_slug);
+			$config['suffix'] = '?' . http_build_query($get, '', "&");
+			$config['first_url'] = base_url($this->_module_slug . '?' . http_build_query($get, '', "&"));
+			$config['uri_segment'] = $segment;
+		} else {
+			$config['base_url'] = base_url($this->_module_slug);
+			$config['uri_segment'] = $segment;
+		}
+		$this->pagination->initialize($config);
+
+		$pagination = $this->pagination->create_links();
+		$offset = ($this->uri->segment($segment) == '') ? 0 : $this->uri->segment($segment);
+
+		$rows = $this->M_order_type->gets($args, $perpage, $offset);
+		$this->_data['rows'] = $rows;
+		$this->_data['pagination'] = $pagination;
+
+		$this->_data['title'] = 'Danh sách ' . $this->_module_name . ' - ' . $this->_data['title'];
+		$this->_data['main_content'] = 'admin/view_page_order_type_index';
+		$this->load->view('layout/admin/view_layout', $this->_data);
+	}
+
+	function add($data) {
+		if (!is_array($data) || empty($data)) {
+			return 0;
+		}
+
+		return $this->M_order_type->add($data);
+	}
+
+	function admin_add() {
+		$data = array(
+			'name' => $this->input->post('name'),
+			'price_type' => $this->input->post('price_type'),
+			'created' => time(),
+			'modified' => 0,
+			'order' => $this->get_max_order() + 1,
+			'status' => 1,
+		);
+
+		return $this->add($data);
+	}
+
+	function update($id, $data) {
+		if (!is_array($data) || empty($data)) {
+			return 0;
+		}
+
+		return $this->M_order_type->update($id, $data);
+	}
+
+	function admin_update($id) {
+		$data = array(
+			'name' => $this->input->post('name'),
+			'price_type' => $this->input->post('price_type'),
+			'modified' => time(),
+		);
+
+		return $this->update($id, $data);
+	}
+
+	function re_order() {
+		$rows = $this->gets();
+		if (is_array($rows) && !empty($rows)) {
+			$i = 0;
+			foreach ($rows as $value) {
+				$i++;
+				$data = array(
+					'order' => $i,
+				);
+				$this->M_order_type->update($value['id'], $data);
+			}
+		}
+	}
+
+	function admin_delete() {
+		$this->_validate_access_role();
+
+		$this->_message_success = 'Đã xóa ' . $this->_module_name . '!';
+		$this->_message_warning = ucfirst($this->_module_name) . ' này không tồn tại!';
+		$id = $this->input->get('id');
+		if ($id != 0) {
+			if (modules::run('price/validate_exist_unit', $id)) {
+				$notify_type = 'danger';
+				$notify_content = ucfirst($this->_module_name) . ' này đang sử dụng nên không xóa được!';
+			} else {
+				if ($this->M_order_type->delete($id)) {
+					$this->re_order();
+					$notify_type = 'success';
+					$notify_content = $this->_message_success;
+				} else {
+					$notify_type = 'danger';
+					$notify_content = $this->_message_danger;
+				}
+			}
+		} else {
+			$notify_type = 'warning';
+			$notify_content = $this->_message_warning;
+		}
+		$this->set_notify_admin($notify_type, $notify_content);
+		redirect(base_url($this->_module_slug));
+	}
+
+	function admin_main() {
+		$this->_validate_access_role();
+
+		$post = $this->input->post();
+		if (!empty($post)) {
+			$action = $this->input->post('action');
+			if ($action == 'update') {
+				$this->_message_success = 'Đã cập nhật ' . $this->_module_name . '!';
+				$this->_message_warning = 'Không có ' . $this->_module_name . ' nào để cập nhật!';
+				$ids = $this->input->post('ids');
+				$orders = $this->input->post('order');
+				$count = count($orders);
+				if (!empty($ids) && !empty($orders)) {
+					for ($i = 0; $i < $count; $i++) {
+						$data = array(
+							'order' => $orders[$i],
+						);
+						$id = $ids[$i];
+
+						if ($this->M_order_type->update($id, $data)) {
+							$notify_type = 'success';
+							$notify_content = $this->_message_success;
+						} else {
+							$notify_type = 'danger';
+							$notify_content = $this->_message_danger;
+						}
+					}
+				} else {
+					$notify_type = 'warning';
+					$notify_content = $this->_message_warning;
+				}
+				$this->set_notify_admin($notify_type, $notify_content);
+				redirect(base_url($this->_module_slug));
+			} elseif ($action == 'delete') {
+				$this->_message_success = 'Đã xóa các ' . $this->_module_name . ' được chọn!';
+				$this->_message_warning = 'Bạn chưa chọn ' . $this->_module_name . ' nào!';
+				$ids = $this->input->post('idcheck');
+
+				if (is_array($ids) && !empty($ids)) {
+					foreach ($ids as $id) {
+						if ($this->M_order_type->delete($id)) {
+							$notify_type = 'success';
+							$notify_content = $this->_message_success;
+						} else {
+							$notify_type = 'danger';
+							$notify_content = $this->_message_danger;
+						}
+					}
+					$this->re_order();
+				} else {
+					$notify_type = 'warning';
+					$notify_content = $this->_message_warning;
+				}
+				$this->set_notify_admin($notify_type, $notify_content);
+				redirect(base_url($this->_module_slug));
+			} elseif ($action == 'content') {
+				redirect(base_url($this->_module_slug . '/them'));
+			}
+		} else {
+			redirect(base_url($this->_module_slug));
+		}
+	}
+
+	function admin_content() {
+		$this->_validate_access_role();
+
+		$this->_plugins_script_admin[] = array(
+			'folder' => 'jquery-validation',
+			'name' => 'jquery.validate',
+		);
+		$this->_plugins_script_admin[] = array(
+			'folder' => 'jquery-validation/localization',
+			'name' => 'messages_vi',
+		);
+
+		$this->set_plugins_admin();
+
+		$this->_modules_script[] = array(
+			'folder' => 'order_type',
+			'name' => 'admin-validate-content',
+		);
+		$this->set_modules();
+
+		$post = $this->input->post();
+		if (!empty($post)) {
+			$this->load->helper('language');
+			$this->lang->load('form_validation', 'vietnamese');
+
+			$this->form_validation->set_error_delimiters('<span class="help-block">', '</span>');
+			$this->form_validation->set_rules('name', 'Tên ' . $this->_module_name, 'trim|required');
+
+			if ($this->form_validation->run($this)) {
+				if ($this->input->post('id')) {
+//update
+					$err = FALSE;
+					$id = $this->input->post('id');
+					if (!$this->admin_update($id)) {
+						$err = TRUE;
+					}
+					if ($err === FALSE) {
+						$notify_type = 'success';
+						$notify_content = 'Cập nhật ' . $this->_module_name . ' thành công!';
+						$this->set_notify_admin($notify_type, $notify_content);
+						redirect(base_url($this->_module_slug));
+					} else {
+						$notify_type = 'danger';
+						$notify_content = 'Có lỗi xảy ra!';
+						$this->set_notify_admin($notify_type, $notify_content);
+					}
+				} else {
+//add
+					$err = FALSE;
+					$insert_id = $this->admin_add();
+					if ($insert_id == 0) {
+						$err = TRUE;
+					}
+
+					if ($err === FALSE) {
+						$notify_type = 'success';
+						$notify_content = ucfirst($this->_module_name) . ' đã được thêm!';
+						$this->set_notify_admin($notify_type, $notify_content);
+						redirect(base_url($this->_module_slug));
+					} else {
+						$notify_type = 'danger';
+						$notify_content = 'Có lỗi xảy ra!';
+						$this->set_notify_admin($notify_type, $notify_content);
+					}
+				}
+			}
+		}
+
+		$title = 'Thêm ' . $this->_module_name . ' - ' . $this->_data['breadcrumbs_module_name'] . ' - ' . $this->_data['title'];
+
+		$segment = 4;
+		$id = ($this->uri->segment($segment) == '') ? 0 : $this->uri->segment($segment);
+		if ($id != 0) {
+			$row = $this->get($id);
+			$this->_data['row'] = $row;
+			$title = 'Cập nhật ' . $this->_module_name . ' - ' . $this->_data['breadcrumbs_module_name'] . ' - ' . $this->_data['title'];
+		}
+
+		$this->_data['title'] = $title;
+		$this->_data['main_content'] = 'admin/view_page_order_type_content';
+		$this->load->view('layout/admin/view_layout', $this->_data);
+	}
+
+}
+
+/* End of file order_types.php */
+/* Location: ./application/modules/purchase_voucher/controllers/order_types.php */

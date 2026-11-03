@@ -1,0 +1,95 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 02-04-2015, 06:52:43
+    Author     : NHAN
+*/
+
+.box-body .form-group .checkbox label{
+    padding-left: 0;
+}
+
+textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    resize: none;
+}
+
+p.required span.required:after, .form-group.required .control-label:after { 
+    content: " (*)";
+    color: #ff0000;
+}
+
+.text-bold{
+	font-weight: 900 !important;
+}
+.text-red{
+	color: rgb(255, 0, 0) !important;
+}
+.no-margin{
+	margin: 0 !important;
+}
+.no-margin-bottom{
+	margin-bottom: 0;
+}
+.customer-info-view{
+	margin-left: 10px;
+}
+.table-view .table-bordered>thead>tr>th, .table-view .table-bordered>tbody>tr>th, .table-view .table-bordered>tfoot>tr>th, .table-view .table-bordered>thead>tr>td, .table-view .table-bordered>tbody>tr>td, .table-view .table-bordered>tfoot>tr>td {
+	border: 1px solid #a3a3a3;
+}
+.table-view .table>caption+thead>tr:first-child>td, .table-view .table>caption+thead>tr:first-child>th, .table-view .table>colgroup+thead>tr:first-child>td, .table-view .table>colgroup+thead>tr:first-child>th, .table-view .table>thead:first-child>tr:first-child>td, .table-view .table>thead:first-child>tr:first-child>th {
+	border-top: 1px solid #a3a3a3;
+}
+.table-view .table-bordered>thead>tr>th, .table-view .table-bordered>thead>tr>td {
+	border-bottom-width: 1px;
+}
+.table-view .table:last-child{
+	border:none !important;
+}
+.table-view .table tr.borderless, .table-view .table td.borderless{
+	border: none !important;
+}
+.table-view .table>tbody>tr>td, .table-view .table>tbody>tr>th, .table-view .table>tfoot>tr>td, .table-view .table>tfoot>tr>th, .table-view .table>thead>tr>td, .table-view .table>thead>tr>th {
+    font-size: 14px;
+    line-height: 0.5;
+    border-top: 1px solid #a3a3a3;
+}
+td.borderless p{
+    margin-top: 6px;
+	padding-bottom: 5px;
+}
+.dotted {
+	border:0;
+	border-bottom: 1px dotted;
+	position: relative;
+	margin-top: 14px;
+	display: block;
+	float: left;
+}
+@media (max-width: 768px){
+	.product-name{
+		width: 240px;
+	}
+}
+.content-wrapper, .right-side, .main-footer {
+	margin-left: 0;
+}
+.content-wrapper, .right-side {
+	/*min-height: 100% !important;*/
+}
+@media print {
+	*{
+	    box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	}
+	body {
+	    width: 100%;
+	    height: 100%;
+	    margin: 0;
+	    padding: 0;
+	}
+}

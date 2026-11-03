@@ -1,0 +1,606 @@
+
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: √</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 25</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 25<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: √</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 26</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 26<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: Å</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 25</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 25<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: Å</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 26</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 26<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: √</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 25</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 25<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: √</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 26</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 26<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: Ç</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 25</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 25<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: Ç</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 26</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 26<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: √</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 25</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 25<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: √</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 26</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 26<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: Ç</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 25</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 25<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: Ç</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 26</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 26<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Warning</p>
+<p>Message:  Cannot modify header information - headers already sent by (output started at /home/vhn/domains/vhngroup.vn/public_html/quanly/system/core/Exceptions.php:272)</p>
+<p>Filename: helpers/barcode_helper.php</p>
+<p>Line Number: 147</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/helpers/barcode_helper.php<br />
+			Line: 147<br />
+			Function: header			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/application/modules/layout/controllers/Layout.php<br />
+			Line: 375<br />
+			Function: barcode			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/vhn/domains/vhngroup.vn/public_html/quanly/index.php<br />
+			Line: 293<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>âPNG
+
+   IHDR     L   cf4   PLTE   ˇˇˇüüüøøø___ﬂﬂﬂ???ßßß\)Œ!  ∏IDAThÅÌó=s1ÜW∆§”rÜ∏ƒ„Ijâ]gbß6vaJüô1mú8ôî0ˇÔÏJZ!éÉ!≈˚ûA“ÍÎ—j˜Ä`ﬂ ,Ö)ÑH!D
+!Rë@·„"áÊÇäé¡IÁˆ±˜}Ç≥¶k‡.oaØY7ƒ|ú7¶\∏M?Œªø?/ÜGÆ}9üBqZ;ƒ§ëg¯JÖ€¥ËH_Áæ˘∂=o-∫øjÜ»≥?y÷kS¡õæ?æ@Ï#RΩÔ!˙”ˆxV3ƒ…Àá‡º)~:&à¸  ∆u≠#<≤ £FÅ\d8“]–ﬂ…O∫∫•…`D◊˜µB‹<e˝ÁŸ◊åNˇ<˚÷~jÙ/ÁÊÏÂaÿÓQ{P‹‰Ÿ`\+ƒ¨yˆäùwAEv’<;ΩΩ„m]Pä"µ≈„ﬂ¨ª®9&ˆ*Ö)ÑËÄ ¿¢AÀèkË±¿U¥dÒUg•qÄæ
+÷4`∏I6~h1‹I4b•Ø8ÄæêG—ö<îPÖPÖPÖPÖPÖ®¢$˙◊‹Tò∂˛6ﬂ0k–O˛Dñèkì#Qù=é;ÀÍ$ìó#ΩÎ¬ÇñÂ,‡ª¨∏v¬ﬂVb·¡¡›ŒR!≥8RÇŸoÓ˜∑6„*që2w§˝Ó dm0Uq»¿‡?êŒdÆlÖH¸ôBDáØCƒuW!Çc„ñ~Ò§\ªÁ'›^a`;ÑÉñÂb'i∏"Î+â«vÇXÒÑ@pd…Y™!@0\HÒ,êÜ∏›àÙç¿ƒB∂tñ“4∆e∞ÀtÖ !πñIîúgÑ)y°Ï	¨Ñàûp	±\=$Öœ†‡∂ê∑’Úø $V!låªeä‚pÌﬁí€óÆAî≥”DﬁMÚ≤Ú]vCvÏE
+!RëBàB§"Ö)ÑH!Dˇ rôQ>∑˝ò    IENDÆB`Ç

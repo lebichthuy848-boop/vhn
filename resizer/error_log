@@ -1,0 +1,2 @@
+[20-Oct-2019 14:08:49 UTC] PHP Warning:  imagecreatefromgif(): '/home/vhngroup/public_html/resizer/cache/external_4134c7f6b3fb1aec4dfbb34768c215ca.php' is not a valid GIF file in /home/vhngroup/public_html/resizer/timthumb.php on line 371
+[20-Oct-2019 15:23:50 UTC] PHP Warning:  imagecreatefromgif(): '/home/vhngroup/public_html/resizer/cache/external_b339f9353a5f72f73f4f4123416d5ede.php' is not a valid GIF file in /home/vhngroup/public_html/resizer/timthumb.php on line 371
